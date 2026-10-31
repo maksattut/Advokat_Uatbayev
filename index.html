@@ -1,0 +1,630 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Адвокат Уатбаев</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Golos+Text:wght@400;500;600;700&display=swap">
+
+<style>
+/* Layout concept: an official legal blank. A ruled letterhead rail holds identity and
+   the one action; the case file runs beside it. Numbered clauses only where the law
+   itself enumerates. Dark-first: ink ground, paper panels, a single brass action. */
+:root{
+  --ink:#0C252E; --ink-2:#102F3A; --ink-3:#17414F;
+  --paper:#E9EDE7; --paper-dim:#A8B6B4; --paper-faint:#6E8288;
+  --brass:#D59B3C; --brass-ink:#1A1206;
+  --signal:#D96A4E;
+  --rule:rgba(168,182,180,.22);
+  --panel:rgba(233,237,231,.045);
+  --ff-display:"PT Serif","Times New Roman",Georgia,serif;
+  --ff-body:"Golos Text","Helvetica Neue",Arial,sans-serif;
+  --ease-out:cubic-bezier(.23,1,.32,1);
+  --ease-io:cubic-bezier(.77,0,.175,1);
+  color-scheme:dark;
+}
+@media (prefers-color-scheme:light){
+  :root:not([data-theme="dark"]){
+    --ink:#EBEEE8; --ink-2:#E0E5DE; --ink-3:#D2D9D3;
+    --paper:#14303A; --paper-dim:#4A6069; --paper-faint:#5F767D;
+    --brass:#8A5A11; --brass-ink:#FFF7E8;
+    --signal:#9B3A26;
+    --rule:rgba(20,48,58,.18);
+    --panel:rgba(20,48,58,.04);
+    color-scheme:light;
+  }
+}
+:root[data-theme="light"]{
+  --ink:#EBEEE8; --ink-2:#E0E5DE; --ink-3:#D2D9D3;
+  --paper:#14303A; --paper-dim:#4A6069; --paper-faint:#5F767D;
+  --brass:#8A5A11; --brass-ink:#FFF7E8;
+  --signal:#9B3A26;
+  --rule:rgba(20,48,58,.18);
+  --panel:rgba(20,48,58,.04);
+  color-scheme:light;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--ink); color:var(--paper);
+  font-family:var(--ff-body); font-size:16px; line-height:1.62;
+  -webkit-font-smoothing:antialiased; -webkit-text-size-adjust:100%;
+}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:40;background:var(--ink)}
+h1,h2,h3{font-family:var(--ff-display);font-weight:700;text-wrap:balance;margin:0;line-height:1.18}
+p{margin:0}
+a{color:inherit}
+.wrap{
+  max-width:1180px;margin:0 auto;
+  padding-left:max(20px,env(safe-area-inset-left,0px));
+  padding-right:max(20px,env(safe-area-inset-right,0px));
+}
+
+/* ---- letterhead bar ---- */
+.bar{
+  position:sticky;top:env(safe-area-inset-top,0px);z-index:30;
+  background:color-mix(in srgb,var(--ink) 92%,transparent);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--rule);
+}
+.bar .wrap{display:flex;align-items:center;gap:16px;padding-block:12px}
+.mark{display:flex;flex-direction:column;gap:1px;min-width:0;margin-right:auto}
+.mark b{font-family:var(--ff-display);font-size:17px;letter-spacing:.2px;font-weight:700}
+.mark span{font-size:11.5px;color:var(--paper-faint);letter-spacing:.09em;text-transform:uppercase}
+.lang{display:flex;border:1px solid var(--rule);border-radius:999px;overflow:hidden;flex:none}
+.lang button{
+  appearance:none;border:0;background:transparent;color:var(--paper-dim);
+  font-family:var(--ff-body);font-size:12.5px;font-weight:600;letter-spacing:.06em;
+  padding:7px 13px;cursor:pointer;transition:color 160ms var(--ease-out),background 160ms var(--ease-out);
+}
+.lang button[aria-pressed="true"]{background:var(--paper);color:var(--ink)}
+.lang button:active{transform:scale(.97)}
+.bar .wa{flex:none}
+@media (max-width:620px){.bar .wa .walong{display:none}}
+
+/* ---- buttons ---- */
+.wa,.ghost{
+  display:inline-flex;align-items:center;gap:9px;text-decoration:none;
+  font-family:var(--ff-body);font-weight:600;font-size:15px;letter-spacing:.01em;
+  padding:13px 20px;border-radius:10px;border:1px solid transparent;cursor:pointer;
+  transition:transform 160ms var(--ease-out),background 180ms var(--ease-out),border-color 180ms var(--ease-out);
+}
+.wa{background:var(--brass);color:var(--brass-ink);box-shadow:0 1px 0 rgba(255,255,255,.18) inset}
+.ghost{background:transparent;color:var(--paper);border-color:var(--rule)}
+.wa:active,.ghost:active{transform:scale(.97)}
+@media (hover:hover) and (pointer:fine){
+  .wa:hover{background:color-mix(in srgb,var(--brass) 88%,#fff)}
+  .ghost:hover{border-color:var(--paper-dim)}
+}
+.wa svg{width:17px;height:17px;flex:none;fill:currentColor}
+.bar .wa{padding:10px 16px;font-size:14px}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px;border-radius:4px}
+
+/* ---- hero ---- */
+.hero .wrap{padding-block:56px 60px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr;gap:36px;padding-block:40px 46px}}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin-bottom:18px}
+.hero h1{font-size:clamp(2.1rem,5.2vw,3.5rem);letter-spacing:-.015em}
+.hero h1 em{font-style:italic;color:var(--brass)}
+.lede{margin-top:20px;font-size:17.5px;color:var(--paper-dim);max-width:46ch}
+.acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.phone-line{margin-top:18px;font-size:14px;color:var(--paper-faint)}
+.phone-line b{font-family:var(--ff-display);font-size:17px;color:var(--paper);font-weight:700;user-select:all;letter-spacing:.01em}
+
+/* ---- checker ---- */
+.check{border:1px solid var(--rule);border-radius:14px;background:var(--panel);padding:24px}
+.check h2{font-size:19px;margin-bottom:5px}
+.check .sub{font-size:13.5px;color:var(--paper-faint);margin-bottom:20px}
+.field{margin-bottom:17px}
+.field label{display:block;font-size:12.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--paper-faint);margin-bottom:7px}
+.field input,.field select{
+  /* 16px keeps iOS from zooming the page when a field takes focus */
+  width:100%;font-family:var(--ff-body);font-size:16px;color:var(--paper);
+  background:color-mix(in srgb,var(--paper) 7%,transparent);
+  border:1px solid var(--rule);border-radius:9px;padding:11px 13px;
+  transition:border-color 160ms var(--ease-out);
+}
+.field input{font-variant-numeric:tabular-nums}
+.field input:focus,.field select:focus{border-color:var(--brass);outline:none}
+.field select{appearance:none;cursor:pointer;background-image:none}
+.out{
+  margin-top:4px;border-top:1px solid var(--rule);padding-top:18px;
+  transition:opacity 220ms var(--ease-out);
+}
+.out .verdict{font-family:var(--ff-display);font-size:19px;line-height:1.3;margin-bottom:8px}
+.out .why{font-size:14px;color:var(--paper-dim)}
+.out .note{font-size:12.5px;color:var(--paper-faint);margin-top:12px;padding-top:12px;border-top:1px dashed var(--rule)}
+.out[data-tone="ok"] .verdict{color:var(--brass)}
+.out[data-tone="warn"] .verdict{color:var(--signal)}
+
+/* ---- sections ---- */
+section.band{border-top:1px solid var(--rule)}
+section.band .wrap{padding-block:62px}
+@media (max-width:700px){section.band .wrap{padding-block:46px}}
+.h-sec{font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.01em;margin-bottom:10px}
+.sec-lede{color:var(--paper-dim);max-width:62ch;margin-bottom:34px;font-size:16px}
+
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:14px;overflow:hidden}
+.svc>div{background:var(--ink);padding:24px 22px;min-width:0}
+.svc h3{font-size:16.5px;margin-bottom:9px}
+.svc p{font-size:14.5px;color:var(--paper-dim)}
+
+/* procedure table */
+.tscroll{overflow-x:auto;border:1px solid var(--rule);border-radius:14px;-webkit-overflow-scrolling:touch}
+.swipe{display:none;font-size:12.5px;color:var(--paper-faint);margin-bottom:11px}
+/* the hint only earns its place where the table really does scroll */
+@media (min-width:561px) and (max-width:760px){.swipe{display:block}}
+.tl{display:none}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:14.5px}
+th,td{text-align:left;padding:15px 18px;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{
+  font-family:var(--ff-body);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--paper-faint);font-weight:600;background:var(--panel);
+}
+tbody tr:last-child td{border-bottom:0}
+td.clause{width:1%;white-space:nowrap;font-family:var(--ff-display);color:var(--brass);font-size:15px;font-weight:700}
+td strong{font-family:var(--ff-display);font-size:15.5px;display:block;margin-bottom:3px}
+td span{color:var(--paper-dim)}
+.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* warning block */
+.warn{border:1px solid color-mix(in srgb,var(--signal) 42%,transparent);border-radius:14px;padding:26px 24px;background:color-mix(in srgb,var(--signal) 7%,transparent)}
+.warn h2{font-size:1.35rem;margin-bottom:12px}
+.warn ul{margin:16px 0 0;padding-left:20px;columns:2;column-gap:34px}
+@media (max-width:620px){.warn ul{columns:1}}
+.warn li{margin-bottom:8px;break-inside:avoid;color:var(--paper-dim);font-size:15px}
+.warn li::marker{color:var(--signal)}
+
+/* steps */
+.steps{display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:14px;overflow:hidden}
+.steps>div{background:var(--ink);padding:22px 24px;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:baseline}
+.steps .n{font-family:var(--ff-display);font-size:15px;color:var(--brass);font-weight:700;font-variant-numeric:tabular-nums}
+.steps h3{font-size:16.5px;margin-bottom:5px}
+.steps p{font-size:14.5px;color:var(--paper-dim)}
+
+/* faq */
+.faq{border:1px solid var(--rule);border-radius:14px;overflow:hidden}
+details{border-bottom:1px solid var(--rule)}
+details:last-child{border-bottom:0}
+summary{
+  padding:18px 22px;cursor:pointer;font-family:var(--ff-display);font-size:16.5px;font-weight:700;
+  list-style:none;display:flex;gap:14px;align-items:baseline;
+  transition:background 160ms var(--ease-out);
+}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";margin-left:auto;color:var(--brass);font-size:19px;flex:none;transition:transform 200ms var(--ease-out)}
+details[open] summary::after{transform:rotate(45deg)}
+@media (hover:hover) and (pointer:fine){summary:hover{background:var(--panel)}}
+details .body{padding:0 22px 20px;color:var(--paper-dim);font-size:15px;max-width:68ch}
+
+/* contact */
+.contact .wrap{padding-block:66px}
+.contact-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:start}
+@media (max-width:820px){.contact-grid{grid-template-columns:1fr;gap:30px}}
+.card{border:1px solid var(--rule);border-radius:14px;padding:26px 24px;background:var(--panel)}
+.card dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:12px 20px;font-size:14.5px}
+.card dt{color:var(--paper-faint);white-space:nowrap}
+.card dd{margin:0}
+footer{border-top:1px solid var(--rule)}
+footer .wrap{padding-block:26px;display:flex;flex-wrap:wrap;gap:12px 28px;font-size:12.5px;color:var(--paper-faint)}
+
+/* ---- phone ---- */
+@media (max-width:560px){
+  .bar .wrap{gap:10px;padding-block:10px}
+  .mark b{font-size:15px}
+  .mark span{font-size:10px;letter-spacing:.07em}
+  .lang button{padding:10px 13px;font-size:12px}
+  .bar .wa{padding:12px 14px}
+  .hero h1{font-size:2rem}
+  .lede{font-size:16.5px}
+  .acts{gap:10px}
+  .acts .wa,.acts .ghost{flex:1 1 100%;justify-content:center}
+  /* four columns can't hold their meaning at this width: stack each
+     procedure into its own labelled block instead of a sideways scroll */
+  .tscroll{overflow:visible}
+  table{min-width:0;display:block;font-size:15px}
+  thead{display:none}
+  tbody,tr,td{display:block;width:auto}
+  tr{border-bottom:1px solid var(--rule);padding:20px 18px}
+  tbody tr:last-child{border-bottom:0}
+  td{border:0;padding:0}
+  td.clause{width:auto;margin-bottom:7px;font-size:16px}
+  td.when,td.num{margin-top:12px}
+  .tl{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+      color:var(--paper-faint);margin-bottom:4px}
+  td.num{white-space:normal}
+  .check{padding:20px 18px}
+  .svc>div{padding:21px 18px}
+  .steps>div{grid-template-columns:1fr;gap:7px;padding:20px 18px}
+  .warn{padding:22px 18px}
+  summary{padding:16px 18px;font-size:15.5px}
+  details .body{padding:0 18px 18px}
+  .card{padding:22px 18px}
+  .h-sec{font-size:1.65rem}
+}
+
+/* one orchestrated entrance */
+.rise{opacity:0;transform:translateY(10px);animation:rise 520ms var(--ease-out) forwards}
+.rise:nth-child(1){animation-delay:0ms}
+.rise:nth-child(2){animation-delay:60ms}
+.rise:nth-child(3){animation-delay:120ms}
+@keyframes rise{to{opacity:1;transform:translateY(0)}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:1ms!important;animation-delay:0ms!important;transition-duration:1ms!important}
+  .rise{opacity:1;transform:none}
+}
+</style>
+
+<header class="bar">
+  <div class="wrap">
+    <div class="mark">
+      <b data-i="name">Уатбаев Алмасхан</b>
+      <span data-i="role">Адвокат</span>
+    </div>
+    <div class="lang" role="group" aria-label="Тіл / Язык">
+      <button type="button" id="btn-ru" aria-pressed="true">РУС</button>
+      <button type="button" id="btn-kk" aria-pressed="false">ҚАЗ</button>
+    </div>
+    <a class="wa" href="https://wa.me/77752433385" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1a16 16 0 01-6.4-5.6c-.5-.7-.8-1.6-.8-2.4 0-.9.5-1.4.7-1.6.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.3.3c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2 1.3 2.3 1.4.3.1.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l2 .9c.2.1.4.2.4.3.1.1.1.5-.1 1.1z"/></svg>
+      <span class="walong" data-i="waBtn">Написать в WhatsApp</span>
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow rise" data-i="eyebrow">Банкротство · Долги · Договоры</p>
+      <h1 class="rise" data-i="h1">Долг стал больше, чем жизнь вокруг него</h1>
+      <p class="lede rise" data-i="lede">Разберу вашу ситуацию по закону и скажу прямо: спишется долг или нет, какая процедура подходит и что делать, если банкротство вам не поможет.</p>
+      <div class="acts rise">
+        <a class="wa" href="https://wa.me/77752433385" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1a16 16 0 01-6.4-5.6c-.5-.7-.8-1.6-.8-2.4 0-.9.5-1.4.7-1.6.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.3.3c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2 1.3 2.3 1.4.3.1.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l2 .9c.2.1.4.2.4.3.1.1.1.5-.1 1.1z"/></svg>
+          <span data-i="waHero">Написать в WhatsApp</span>
+        </a>
+        <a class="ghost" href="#procedury" data-i="ghostHero">Какие есть процедуры</a>
+      </div>
+      <p class="phone-line"><span data-i="phoneLabel">Телефон и WhatsApp</span> · <b>+7 775 243 3385</b></p>
+    </div>
+
+    <div class="check rise">
+      <h2 data-i="ckTitle">Проверка за минуту</h2>
+      <p class="sub" data-i="ckSub">Считает по действующим нормам 2026 года. Не заменяет консультацию.</p>
+      <div class="field">
+        <label for="ck-sum" data-i="ckSum">Сумма долга, ₸</label>
+        <input id="ck-sum" type="number" inputmode="numeric" min="0" step="10000" value="4500000">
+      </div>
+      <div class="field">
+        <label for="ck-term" data-i="ckTerm">Сколько не платите</label>
+        <select id="ck-term">
+          <option value="0" data-i="ckT0">Менее 12 месяцев</option>
+          <option value="1" selected data-i="ckT1">От 12 месяцев до 5 лет</option>
+          <option value="2" data-i="ckT2">Более 5 лет</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="ck-prop" data-i="ckProp">Имущество и залоги</label>
+        <select id="ck-prop">
+          <option value="0" selected data-i="ckP0">Нет имущества, кроме единственного жилья</option>
+          <option value="1" data-i="ckP1">Есть имущество или залог</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="ck-inc" data-i="ckInc">Стабильный доход</label>
+        <select id="ck-inc">
+          <option value="0" selected data-i="ckI0">Нет или нерегулярный</option>
+          <option value="1" data-i="ckI1">Есть, но на платежи не хватает</option>
+        </select>
+      </div>
+      <div class="out" id="ck-out" data-tone="ok" aria-live="polite">
+        <p class="verdict" id="ck-verdict"></p>
+        <p class="why" id="ck-why"></p>
+        <p class="note" data-i="ckNote">Порог внесудебного банкротства — 1600 МРП, в 2026 году это 6 920 000 ₸.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2 class="h-sec" data-i="svcH">С чем я работаю</h2>
+    <p class="sec-lede" data-i="svcL">Долговые дела и гражданское право. Веду дело от первой консультации до решения суда или завершения процедуры.</p>
+    <div class="svc">
+      <div><h3 data-i="s1t">Банкротство физических лиц</h3><p data-i="s1p">Внесудебное, судебное и восстановление платёжеспособности. Подбираю процедуру, собираю документы, веду дело и отвечаю на возражения кредиторов.</p></div>
+      <div><h3 data-i="s2t">Работа с закредитованностью</h3><p data-i="s2p">Реструктуризация, спор о незаконных комиссиях и пенях, защита от коллекторов, снятие арестов со счетов, вопросы по исполнительному производству.</p></div>
+      <div><h3 data-i="s3t">Гражданско-правовые споры</h3><p data-i="s3p">Взыскание долга и защита от взыскания, сделки с недвижимостью, наследство, возмещение ущерба, семейные и жилищные дела.</p></div>
+      <div><h3 data-i="s4t">Проверка договоров</h3><p data-i="s4p">Читаю договор до подписания: кабальные условия, скрытые штрафы, залог, поручительство. Правки, протокол разногласий, сопровождение сделки.</p></div>
+      <div><h3 data-i="s5t">Представительство в суде</h3><p data-i="s5p">Иски, отзывы, апелляция и кассация. Участвую в заседаниях лично, вы можете не присутствовать там, где закон это допускает.</p></div>
+      <div><h3 data-i="s6t">Письменные заключения</h3><p data-i="s6p">Правовая позиция по вашей ситуации в письменном виде — когда нужно решение взвесить, а не действовать сразу.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="procedury">
+  <div class="wrap">
+    <h2 class="h-sec" data-i="prH">Три процедуры по закону</h2>
+    <p class="sec-lede" data-i="prL">Закон «О восстановлении платёжеспособности и банкротстве граждан РК» даёт три пути. Выбирают не по желанию, а по тому, какие условия выполняются.</p>
+    <p class="swipe" data-i="swipe">Таблицу можно листать вбок</p>
+    <div class="tscroll">
+      <table>
+        <thead><tr>
+          <th data-i="thN">№</th><th data-i="thProc">Процедура</th><th data-i="thWhen">Когда подходит</th><th data-i="thTerm">Срок</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="clause">1</td>
+            <td><strong data-i="p1n">Внесудебное банкротство</strong><span data-i="p1d">Через eGov или e-Salyq Azamat, без суда</span></td>
+            <td class="when"><span class="tl" data-i="thWhen">Когда подходит</span><span data-i="p1w">Долг до 1600 МРП (6 920 000 ₸) перед банками, МФО и коллекторами. Не платите 12 месяцев и более, нет имущества и залога.</span></td>
+            <td class="num"><span class="tl" data-i="thTerm">Срок</span><span data-i="p1t">6 месяцев. Один месяц, если не платите более 5 лет</span></td>
+          </tr>
+          <tr>
+            <td class="clause">2</td>
+            <td><strong data-i="p2n">Судебное банкротство</strong><span data-i="p2d">Через суд, с финансовым управляющим</span></td>
+            <td class="when"><span class="tl" data-i="thWhen">Когда подходит</span><span data-i="p2w">Долг выше порога, либо есть имущество, которое пойдёт на расчёты с кредиторами.</span></td>
+            <td class="num"><span class="tl" data-i="thTerm">Срок</span><span data-i="p2t">Зависит от состава имущества и кредиторов</span></td>
+          </tr>
+          <tr>
+            <td class="clause">3</td>
+            <td><strong data-i="p3n">Восстановление платёжеспособности</strong><span data-i="p3d">Не списание, а рассрочка по плану</span></td>
+            <td class="when"><span class="tl" data-i="thWhen">Когда подходит</span><span data-i="p3w">Есть стабильный доход, и долг реально погасить по графику, сохранив имущество.</span></td>
+            <td class="num"><span class="tl" data-i="thTerm">Срок</span><span data-i="p3t">План до 5 лет</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="warn">
+      <h2 data-i="wH">Эти долги банкротство не спишет</h2>
+      <p data-i="wL">Говорю об этом сразу, до оплаты и до подачи. Если вся ваша задолженность из этого списка, процедура не решит проблему, и я скажу об этом на первой консультации.</p>
+      <ul>
+        <li data-i="w1">Алименты</li>
+        <li data-i="w2">Возмещение вреда жизни и здоровью</li>
+        <li data-i="w3">Налоговая задолженность</li>
+        <li data-i="w4">Ущерб от уголовного преступления</li>
+        <li data-i="w5">Вознаграждение финансового управляющего</li>
+        <li data-i="w6">Долги, по которым был платёж за последние 12 месяцев</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2 class="h-sec" data-i="stH">Как идёт работа</h2>
+    <p class="sec-lede" data-i="stL">Порядок одинаковый для любого дела. На любом шаге вы знаете, что происходит и сколько это стоит.</p>
+    <div class="steps">
+      <div><span class="n">01</span><div><h3 data-i="st1t">Разбор ситуации</h3><p data-i="st1p">Вы присылаете список долгов, договоры и решения судов, если они есть. Я проверяю сроки, суммы и состав кредиторов.</p></div></div>
+      <div><span class="n">02</span><div><h3 data-i="st2t">Прямой ответ</h3><p data-i="st2p">Называю процедуру, которая подходит, или честно говорю, что подходящей нет. Сразу называю стоимость работы и что в неё входит.</p></div></div>
+      <div><span class="n">03</span><div><h3 data-i="st3t">Договор и документы</h3><p data-i="st3p">Заключаем соглашение. Собираю справки, составляю заявление и приложения, проверяю каждый документ до подачи.</p></div></div>
+      <div><span class="n">04</span><div><h3 data-i="st4t">Подача и ведение</h3><p data-i="st4p">Подаю заявление, отвечаю на запросы уполномоченного органа и возражения кредиторов, представляю вас в суде.</p></div></div>
+      <div><span class="n">05</span><div><h3 data-i="st5t">Завершение</h3><p data-i="st5p">Получаете решение и документ о завершении процедуры. Объясняю последствия и ограничения, которые наступят после.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2 class="h-sec" data-i="fH">Частые вопросы</h2>
+    <div class="faq">
+      <details><summary data-i="f1q">Внесудебное банкротство ведь бесплатное. Зачем адвокат?</summary><div class="body" data-i="f1a">Подача действительно бесплатная, государственной пошлины нет, и никто не вправе брать с вас деньги за саму процедуру. Платите вы за другое: за проверку, подходите ли вы под условия, за правильно собранный пакет и за то, чтобы заявление не вернули. Отказы чаще всего приходят из-за несоответствия условиям и ошибок в документах, а не из-за злого умысла органа.</div></details>
+      <details><summary data-i="f2q">Что будет после признания банкротом?</summary><div class="body" data-i="f2a">Наступают ограничения: в течение установленного законом срока нельзя брать новые займы и кредиты, сведения о банкротстве учитываются в кредитной истории, а повторно пройти процедуру можно не раньше установленного срока. Полный список последствий разбираем до подачи, чтобы решение было осознанным.</div></details>
+      <details><summary data-i="f3q">У меня единственное жильё. Его заберут?</summary><div class="body" data-i="f3a">Зависит от процедуры и от того, находится ли жильё в залоге. Залоговое жильё и имущество, служащее обеспечением, имеют отдельный режим. Это как раз тот вопрос, где общий ответ из интернета вредит: нужно смотреть ваши договоры.</div></details>
+      <details><summary data-i="f4q">Коллекторы звонят родственникам и на работу. Это законно?</summary><div class="body" data-i="f4a">Закон ограничивает частоту, время и круг лиц, с которыми коллекторское агентство вправе общаться. Нарушения фиксируются и обжалуются, в том числе в регулирующий орган. Соберите записи звонков, сообщения и даты — с этим можно работать.</div></details>
+      <details><summary data-i="f5q">Работаете онлайн или нужно приезжать?</summary><div class="body" data-i="f5a">Первичный разбор и большую часть переписки веду онлайн, через WhatsApp. Очная встреча нужна для подписания соглашения и доверенности, а также там, где требуется личное присутствие.</div></details>
+      <details><summary data-i="f6q">Сколько стоит?</summary><div class="body" data-i="f6a">Стоимость зависит от процедуры и объёма работы, и я называю её до заключения соглашения, после разбора вашей ситуации. Без «от» и без доплат по ходу дела за то, что входило в договорённость.</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="band contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <h2 class="h-sec" data-i="cH">Напишите, и я посмотрю ваши документы</h2>
+        <p class="sec-lede" data-i="cL">Опишите ситуацию в одном сообщении: общая сумма долга, сколько не платите и есть ли судебные решения. Этого достаточно, чтобы я дал первый ответ.</p>
+        <div class="acts">
+          <a class="wa" href="https://wa.me/77752433385" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1a16 16 0 01-6.4-5.6c-.5-.7-.8-1.6-.8-2.4 0-.9.5-1.4.7-1.6.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.3.3c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2 1.3 2.3 1.4.3.1.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l2 .9c.2.1.4.2.4.3.1.1.1.5-.1 1.1z"/></svg>
+            <span data-i="waFoot">Написать в WhatsApp</span>
+          </a>
+          <button class="ghost" type="button" id="copy-phone" data-i="copyBtn">Скопировать номер</button>
+        </div>
+        <p class="phone-line"><b>+7 775 243 3385</b></p>
+      </div>
+      <div class="card">
+        <dl>
+          <dt data-i="dName">Адвокат</dt><dd data-i="name2">Уатбаев Алмасхан</dd>
+          <dt data-i="dWa">WhatsApp</dt><dd>+7 775 243 3385</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span data-i="fName">Уатбаев Алмасхан · Адвокат</span>
+    <span>+7 775 243 3385</span>
+    <span data-i="fDisc">Материалы сайта носят информационный характер и не являются юридической консультацией.</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  var MRP = 4325, LIMIT = 1600 * MRP; // 6 920 000 ₸ в 2026 году
+
+  var KK = {
+    name:"Уатбаев Алмасхан", name2:"Уатбаев Алмасхан", role:"Адвокат",
+    waBtn:"WhatsApp‑қа жазу", waHero:"WhatsApp‑қа жазу", waFoot:"WhatsApp‑қа жазу",
+    eyebrow:"Банкроттық · Қарыздар · Шарттар",
+    h1:"Қарыз айналадағы өмірден де үлкен болып кетті",
+    lede:"Жағдайыңызды заң бойынша талдап, тура айтамын: қарыз есептен шыға ма, қай рәсім қолайлы және банкроттық көмектеспесе не істеу керек.",
+    ghostHero:"Қандай рәсімдер бар",
+    phoneLabel:"Телефон және WhatsApp",
+    ckTitle:"Бір минутта тексеру",
+    ckSub:"2026 жылғы қолданыстағы нормалар бойынша есептейді. Кеңесті алмастырмайды.",
+    ckSum:"Қарыз сомасы, ₸", ckTerm:"Қанша уақыт төлемедіңіз",
+    ckT0:"12 айдан аз", ckT1:"12 айдан 5 жылға дейін", ckT2:"5 жылдан астам",
+    ckProp:"Мүлік және кепіл",
+    ckP0:"Жалғыз тұрғын үйден басқа мүлік жоқ", ckP1:"Мүлік немесе кепіл бар",
+    ckInc:"Тұрақты табыс", ckI0:"Жоқ немесе тұрақсыз", ckI1:"Бар, бірақ төлемдерге жетпейді",
+    ckNote:"Соттан тыс банкроттық шегі — 1600 АЕК, 2026 жылы бұл 6 920 000 ₸.",
+    svcH:"Немен жұмыс істеймін",
+    svcL:"Қарыз істері және азаматтық құқық. Істі бірінші кеңестен сот шешіміне немесе рәсім аяқталғанға дейін жүргіземін.",
+    s1t:"Жеке тұлғалардың банкроттығы",
+    s1p:"Соттан тыс банкроттық, соттық банкроттық және төлем қабілеттілігін қалпына келтіру. Рәсімді таңдаймын, құжаттарды жинаймын, істі жүргіземін және несие берушілердің қарсылықтарына жауап беремін.",
+    s2t:"Несие жүктемесімен жұмыс",
+    s2p:"Қайта құрылымдау, заңсыз комиссиялар мен өсімпұлдар бойынша дау, коллекторлардан қорғау, шоттардағы тыйымды алып тастау, атқарушылық іс жүргізу мәселелері.",
+    s3t:"Азаматтық‑құқықтық даулар",
+    s3p:"Қарызды өндіру және өндіруден қорғау, жылжымайтын мүлік мәмілелері, мұрагерлік, залалды өтеу, отбасылық және тұрғын үй істері.",
+    s4t:"Шарттарды тексеру",
+    s4p:"Шартқа қол қоймай тұрып оқимын: ауыр талаптар, жасырын айыппұлдар, кепіл, кепілгерлік. Түзетулер, келіспеушілік хаттамасы, мәмілені сүйемелдеу.",
+    s5t:"Сотта өкілдік ету",
+    s5p:"Талап арыздар, пікірлер, апелляция және кассация. Отырыстарға өзім қатысамын, заң рұқсат еткен жерде сіз бармасаңыз да болады.",
+    s6t:"Жазбаша қорытындылар",
+    s6p:"Жағдайыңыз бойынша құқықтық ұстаным жазбаша түрде — бірден әрекет етпей, шешімді таразылау керек болғанда.",
+    prH:"Заң бойынша үш рәсім",
+    prL:"«ҚР азаматтарының төлем қабілеттілігін қалпына келтіру және банкроттығы туралы» заң үш жол береді. Таңдау қалау бойынша емес, қандай шарттар орындалатынына қарай жүреді.",
+    swipe:"Кестені бүйіріне қарай сырғытуға болады",
+    thN:"№", thProc:"Рәсім", thWhen:"Қашан келеді", thTerm:"Мерзімі",
+    p1n:"Соттан тыс банкроттық", p1d:"eGov немесе e‑Salyq Azamat арқылы, сотсыз",
+    p1w:"Банктер, МҚҰ және коллекторлар алдындағы 1600 АЕК-ке (6 920 000 ₸) дейінгі қарыз. 12 ай және одан ұзақ төлемейсіз, мүлік пен кепіл жоқ.",
+    p1t:"6 ай. 5 жылдан астам төлемесеңіз — бір ай",
+    p2n:"Соттық банкроттық", p2d:"Сот арқылы, қаржы басқарушысымен",
+    p2w:"Қарыз шектен жоғары, немесе несие берушілермен есеп айырысуға кететін мүлік бар.",
+    p2t:"Мүлік пен несие берушілер құрамына байланысты",
+    p3n:"Төлем қабілеттілігін қалпына келтіру", p3d:"Есептен шығару емес, жоспар бойынша бөліп төлеу",
+    p3w:"Тұрақты табыс бар және қарызды мүлікті сақтай отырып, кесте бойынша өтеуге болады.",
+    p3t:"Жоспар 5 жылға дейін",
+    wH:"Бұл қарыздарды банкроттық есептен шығармайды",
+    wL:"Бұл туралы бірден, төлемнен де, өтініш беруден де бұрын айтамын. Егер барлық берешегіңіз осы тізімнен болса, рәсім мәселені шешпейді, мұны бірінші кеңесте айтамын.",
+    w1:"Алимент", w2:"Өмір мен денсаулыққа келтірілген зиянды өтеу", w3:"Салық берешегі",
+    w4:"Қылмыстық құқық бұзушылықтан келген залал", w5:"Қаржы басқарушысының сыйақысы",
+    w6:"Соңғы 12 айда төлем жасалған қарыздар",
+    stH:"Жұмыс қалай жүреді", stL:"Тәртіп кез келген іс үшін бірдей. Әр қадамда не болып жатқанын және оның құнын білесіз.",
+    st1t:"Жағдайды талдау", st1p:"Қарыздар тізімін, шарттарды және бар болса сот шешімдерін жібересіз. Мерзімдерді, сомаларды және несие берушілер құрамын тексеремін.",
+    st2t:"Тура жауап", st2p:"Қолайлы рәсімді атаймын немесе қолайлысы жоқ екенін ашық айтамын. Жұмыс құнын және оған не кіретінін бірден айтамын.",
+    st3t:"Шарт және құжаттар", st3p:"Келісім жасаймыз. Анықтамаларды жинаймын, өтініш пен қосымшаларды дайындаймын, әр құжатты беруден бұрын тексеремін.",
+    st4t:"Өтініш беру және жүргізу", st4p:"Өтінішті беремін, уәкілетті органның сұрауларына және несие берушілердің қарсылықтарына жауап беремін, сотта сіздің мүддеңізді қорғаймын.",
+    st5t:"Аяқтау", st5p:"Шешімді және рәсімнің аяқталғаны туралы құжатты аласыз. Одан кейінгі салдарлар мен шектеулерді түсіндіремін.",
+    fH:"Жиі қойылатын сұрақтар",
+    f1q:"Соттан тыс банкроттық тегін ғой. Адвокат не үшін керек?",
+    f1a:"Өтініш беру шынымен тегін, мемлекеттік баж жоқ, және рәсімнің өзі үшін ешкім сізден ақша алуға құқылы емес. Сіз басқа нәрсе үшін төлейсіз: шарттарға сәйкес келетін‑келмейтініңізді тексеру үшін, дұрыс жиналған топтама үшін және өтініш қайтарылмауы үшін. Бас тартулар көбіне шарттарға сәйкессіздіктен және құжаттардағы қателерден болады.",
+    f2q:"Банкрот деп танылғаннан кейін не болады?",
+    f2a:"Шектеулер басталады: заңда белгіленген мерзім ішінде жаңа қарыз бен несие алуға болмайды, банкроттық туралы мәліметтер несие тарихында ескеріледі, ал рәсімнен қайта өту белгіленген мерзімнен ерте мүмкін емес. Салдарлардың толық тізімін өтініш берерден бұрын талдаймыз.",
+    f3q:"Менде жалғыз тұрғын үй бар. Оны алып қоя ма?",
+    f3a:"Рәсімге және тұрғын үйдің кепілде тұрған‑тұрмағанына байланысты. Кепілдегі тұрғын үй мен қамтамасыз ету болып табылатын мүліктің жеке режимі бар. Дәл осы жерде интернеттегі жалпы жауап зиян келтіреді: сіздің шарттарыңызды қарау керек.",
+    f4q:"Коллекторлар туыстарға және жұмысқа қоңырау шалады. Бұл заңды ма?",
+    f4a:"Заң коллекторлық агенттіктің қарым‑қатынас жасау жиілігін, уақытын және адамдар шеңберін шектейді. Бұзушылықтар тіркеліп, оның ішінде реттеуші органға шағымданылады. Қоңырау жазбаларын, хабарламаларды және күндерді жинаңыз — бұлармен жұмыс істеуге болады.",
+    f5q:"Онлайн жұмыс істейсіз бе, әлде келу керек пе?",
+    f5a:"Алғашқы талдауды және хат алысудың көп бөлігін онлайн, WhatsApp арқылы жүргіземін. Кездесу келісім мен сенімхатқа қол қою үшін және жеке қатысу талап етілетін жерде қажет.",
+    f6q:"Қанша тұрады?",
+    f6a:"Құны рәсімге және жұмыс көлеміне байланысты, оны жағдайыңызды талдағаннан кейін, келісім жасаспас бұрын айтамын. «Бастап» деген баға жоқ, келісілген жұмыс үшін жол‑жөнекей қосымша ақы алынбайды.",
+    cH:"Жазыңыз, құжаттарыңызды қараймын",
+    cL:"Жағдайды бір хабарламада сипаттаңыз: қарыздың жалпы сомасы, қанша уақыт төлемейсіз және сот шешімдері бар ма. Бірінші жауап беруім үшін осы жеткілікті.",
+    copyBtn:"Нөмірді көшіру",
+    dName:"Адвокат", dWa:"WhatsApp",
+    fName:"Уатбаев Алмасхан · Адвокат",
+    fDisc:"Сайт материалдары ақпараттық сипатта және заң кеңесі болып табылмайды."
+  };
+
+  var RU = {};
+  document.querySelectorAll("[data-i]").forEach(function(el){ RU[el.dataset.i] = el.textContent; });
+
+  var V = {
+    ru:{
+      none:{v:"Ни одна процедура не подходит по сроку",
+            w:"Банкротство доступно, когда обязательства не исполняются 12 месяцев и более. Пока срок меньше, работают другие инструменты: реструктуризация, спор по начислениям, рассрочка. Это тоже моя работа — напишите."},
+      rest:{v:"Скорее восстановление платёжеспособности",
+            w:"При стабильном доходе или имуществе суд чаще даёт план погашения с рассрочкой до 5 лет, а не списание. Имущество при этом сохраняется."},
+      court:{v:"Скорее судебное банкротство",
+            w:"Долг превышает 1600 МРП либо есть имущество и залоги. Такие дела идут через суд с финансовым управляющим — одной подачей через eGov не обойтись."},
+      out6:{v:"Подходит внесудебное банкротство",
+            w:"Долг в пределах 1600 МРП, просрочка от 12 месяцев, имущества нет. Стандартный срок процедуры — 6 месяцев. Проверю документы до подачи, чтобы заявление не вернули."},
+      out1:{v:"Внесудебное банкротство, ускоренный срок",
+            w:"Долг в пределах 1600 МРП и вы не платите более 5 лет. С 19 марта 2026 года для этого случая процедура идёт один месяц вместо шести."}
+    },
+    kk:{
+      none:{v:"Мерзімі бойынша бірде‑бір рәсім қолайлы емес",
+            w:"Банкроттық міндеттемелер 12 ай және одан ұзақ орындалмағанда қолжетімді. Мерзім одан аз болса, басқа құралдар жұмыс істейді: қайта құрылымдау, есептеулер бойынша дау, бөліп төлеу. Бұл да менің жұмысым — жазыңыз."},
+      rest:{v:"Көбіне төлем қабілеттілігін қалпына келтіру",
+            w:"Тұрақты табыс немесе мүлік болса, сот есептен шығарудың орнына 5 жылға дейін бөліп төлеу жоспарын жиі береді. Мүлік сақталады."},
+      court:{v:"Көбіне соттық банкроттық",
+            w:"Қарыз 1600 АЕК‑тен асады немесе мүлік пен кепілдер бар. Мұндай істер қаржы басқарушысымен сот арқылы жүреді — eGov арқылы бір өтінішпен шешілмейді."},
+      out6:{v:"Соттан тыс банкроттық келеді",
+            w:"Қарыз 1600 АЕК шегінде, мерзімі 12 айдан асқан, мүлік жоқ. Рәсімнің стандартты мерзімі — 6 ай. Өтініш қайтарылмауы үшін құжаттарды беруден бұрын тексеремін."},
+      out1:{v:"Соттан тыс банкроттық, жеделдетілген мерзім",
+            w:"Қарыз 1600 АЕК шегінде және сіз 5 жылдан астам төлемейсіз. 2026 жылғы 19 наурыздан бастап бұл жағдайда рәсім алты айдың орнына бір ай жүреді."}
+    }
+  };
+
+  var lang = "ru";
+  try { var s = localStorage.getItem("uat-lang"); if (s === "kk" || s === "ru") lang = s; } catch(e){}
+
+  function apply(l){
+    lang = l;
+    var dict = (l === "kk") ? KK : RU;
+    document.querySelectorAll("[data-i]").forEach(function(el){
+      var t = dict[el.dataset.i];
+      if (t) el.textContent = t;
+    });
+    document.documentElement.lang = (l === "kk") ? "kk" : "ru";
+    document.getElementById("btn-ru").setAttribute("aria-pressed", String(l === "ru"));
+    document.getElementById("btn-kk").setAttribute("aria-pressed", String(l === "kk"));
+    try { localStorage.setItem("uat-lang", l); } catch(e){}
+    calc();
+  }
+
+  function calc(){
+    var sum  = Number(document.getElementById("ck-sum").value) || 0;
+    var term = Number(document.getElementById("ck-term").value);
+    var prop = Number(document.getElementById("ck-prop").value);
+    var inc  = Number(document.getElementById("ck-inc").value);
+    var t = V[lang], key;
+
+    if (term === 0)            key = "none";
+    else if (inc === 1)        key = "rest";
+    else if (prop === 1 || sum > LIMIT) key = "court";
+    else if (term === 2)       key = "out1";
+    else                       key = "out6";
+
+    var out = document.getElementById("ck-out");
+    out.dataset.tone = (key === "none" || key === "court") ? "warn" : "ok";
+    out.style.opacity = "0";
+    document.getElementById("ck-verdict").textContent = t[key].v;
+    document.getElementById("ck-why").textContent = t[key].w;
+    requestAnimationFrame(function(){ out.style.opacity = "1"; });
+  }
+
+  document.getElementById("btn-ru").addEventListener("click", function(){ apply("ru"); });
+  document.getElementById("btn-kk").addEventListener("click", function(){ apply("kk"); });
+  ["ck-sum","ck-term","ck-prop","ck-inc"].forEach(function(id){
+    document.getElementById(id).addEventListener("input", calc);
+  });
+
+  var cp = document.getElementById("copy-phone");
+  cp.addEventListener("click", function(){
+    var done = function(){
+      var old = cp.textContent;
+      cp.textContent = (lang === "kk") ? "Көшірілді" : "Скопировано";
+      setTimeout(function(){ cp.textContent = old; }, 1600);
+    };
+    try {
+      navigator.clipboard.writeText("+7 775 243 3385").then(done, function(){
+        var r = document.createRange();
+        r.selectNodeContents(document.querySelector(".contact .phone-line b"));
+        var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+      });
+    } catch(e){}
+  });
+
+  apply(lang);
+})();
+</script>
+
+</body></html>
